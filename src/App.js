@@ -64,15 +64,6 @@ function App() {
         <div className="section" id="features">
           <h2 className="subtitle">App Features</h2>
           <AppFeatures />
-          <ul className="content">
-            <li>User-friendly interface</li>
-            <li>Straightforward task handling</li>
-            <li>QA & Mechanic performance analytics</li>
-            <li>Real-time task status</li>
-            <li>Hisorical data downloads</li>
-            <li>Mobile accessibility</li>
-            <li>Real-time alerts and notifications</li>
-          </ul>
         </div>
       </FadeInSection>
       <FadeInSection>

@@ -1,21 +1,21 @@
 import React, { useState } from 'react';
-import './AppFeatures.css'; // Make sure this path is correct
+import './AppFeatures.css';
 
-const FeatureCard = ({ title, description }) => {
-  const [isFlipped, setIsFlipped] = useState(false);
+const FeatureCard = ({ feature }) => {
+  const [flipped, setFlipped] = useState(false);
 
-  const handleClick = () => {
-    setIsFlipped(!isFlipped);
+  const handleFlip = () => {
+    setFlipped(!flipped); // Toggle the flipped state
   };
 
   return (
-    <div className="feature-card" onClick={handleClick}>
-      <div className={`feature-card-inner ${isFlipped ? 'is-flipped' : ''}`}>
-        <div className="card-front">
-          <div className="feature-title">{title}</div>
+    <div className={`feature-card ${flipped ? 'flipped' : ''}`} onClick={handleFlip}>
+      <div className="feature-card-inner">
+        <div className="card-face card-front">
+          <div className="feature-title">{feature.title}</div>
         </div>
-        <div className="card-back">
-          <div className="feature-description">{description}</div>
+        <div className="card-face card-back">
+          <div className="feature-description">{feature.description}</div>
         </div>
       </div>
     </div>
@@ -24,15 +24,21 @@ const FeatureCard = ({ title, description }) => {
 
 const AppFeatures = () => {
   const features = [
-    { id: 1, title: 'Feature 1', description: 'Description of Feature 1' },
-    { id: 2, title: 'Feature 2', description: 'Description of Feature 2' },
-    // Add more features as needed
+    { id: 1, title: 'User-friendly interface', description: 'Description of Feature 1' },
+    { id: 2, title: 'Straightforward task handling', description: 'Description of Feature 2' },
+    { id: 3, title: 'Mobile accessibility', description: 'Description of Feature 1' },
+    { id: 4, title: 'QA & Mechanic performance analytics', description: 'Description of Feature 1' },
+    { id: 5, title: 'Real-time task status', description: 'Description of Feature 1' },
+    { id: 6, title: 'Real-time alerts and notifications', description: 'Description of Feature 1' },
+    { id: 6, title: 'Hisorical data downloads', description: 'Description of Feature 1' },
+    
+    // More features can be added here
   ];
 
   return (
     <div className="features-container">
-      {features.map(feature => (
-        <FeatureCard key={feature.id} title={feature.title} description={feature.description} />
+      {features.map((feature, index) => (
+        <FeatureCard key={index} feature={feature} />
       ))}
     </div>
   );
