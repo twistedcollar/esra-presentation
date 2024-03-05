@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/esra-presentation/static/css/main.b3429120.css",
+    "main.js": "/esra-presentation/static/js/main.dc07d84c.js",
+    "static/js/453.29e84d12.chunk.js": "/esra-presentation/static/js/453.29e84d12.chunk.js",
+    "index.html": "/esra-presentation/index.html",
+    "main.b3429120.css.map": "/esra-presentation/static/css/main.b3429120.css.map",
+    "main.dc07d84c.js.map": "/esra-presentation/static/js/main.dc07d84c.js.map",
+    "453.29e84d12.chunk.js.map": "/esra-presentation/static/js/453.29e84d12.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b3429120.css",
+    "static/js/main.dc07d84c.js"
+  ]
+}
