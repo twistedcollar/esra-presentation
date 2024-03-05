@@ -1,5 +1,25 @@
 import React, { useState} from 'react';
 import './Timeline.css';
+
+
+
+// Simple Modal Component
+const Modal = ({ milestone, onClose }) => {
+    if (!milestone) return null;
+  
+    return (
+      <div className="modal">
+        <div className="modal-content">
+          <h2>{milestone.milestone}</h2>
+          <p>{milestone.description}</p>
+          <p>{milestone.date}</p>
+          <button onClick={onClose}>Close</button>
+        </div>
+      </div>
+    );
+  };
+
+  
 // Define a template timeline and associated risks
 // Define timeline data
 const timelineData = [

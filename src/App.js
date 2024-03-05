@@ -6,6 +6,7 @@ import 'chart.js/auto';
 import ROIAnalysis from './ROIAnalysis';
 import { BudgetData } from './ChartData';
 import Timeline from './Timeline';
+import AppFeatures from './AppFeatures';
 
 
 const FadeInSection = (props) => {
@@ -56,6 +57,22 @@ function App() {
           <p className="content">
             Project ESRA streamlines communication between mechanics and remote QA specialists, reducing downtime and walking time. Its user-friendly interface ensures straightforward task handling, enabling teams to focus on keeping aircraft flying safely.
           </p>
+        </div>
+      </FadeInSection>
+      <FadeInSection>
+        
+        <div className="section" id="features">
+          <h2 className="subtitle">App Features</h2>
+          <AppFeatures />
+          <ul className="content">
+            <li>User-friendly interface</li>
+            <li>Straightforward task handling</li>
+            <li>QA & Mechanic performance analytics</li>
+            <li>Real-time task status</li>
+            <li>Hisorical data downloads</li>
+            <li>Mobile accessibility</li>
+            <li>Real-time alerts and notifications</li>
+          </ul>
         </div>
       </FadeInSection>
       <FadeInSection>
