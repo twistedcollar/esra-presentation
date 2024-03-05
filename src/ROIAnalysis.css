@@ -1,0 +1,88 @@
+/* ROI Analysis Section Styling to match the app's theme */
+#roi-analysis {
+    background: rgba(255, 255, 255, 0.1); /* Match the section background */
+    padding: 20px;
+    border-radius: 10px; /* Consistent with other sections */
+    color: white; /* Text color for light theme */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Match the shadow of other sections */
+    max-width: 800px; /* Consistent with other sections */
+    margin: 20px auto; /* Consistent with other sections */
+    backdrop-filter: blur(10px); /* Consistent with other sections */
+  }
+  
+  #roi-analysis h2.subtitle { /* Aligning with other subtitles */
+    color: #2C89C9; /* Use the app's subtitle color */
+    margin-bottom: 20px; /* Spacing to match the app's style */
+    text-transform: none; /* If you want to keep the case as is */
+
+  }
+  
+  #roi-analysis .content { /* Aligning with other content */
+    text-align: justify;
+    margin-bottom: 20px;
+  }
+  
+
+  #roi-analysis .roi-form {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-gap: 10px;
+    align-items: center; /* This will vertically center the labels with the inputs */
+    margin-bottom: 20px; /* Spacing between form and savings display */
+  }
+  
+  #roi-analysis label {
+    grid-column: 1 / 2; /* Position all labels in the first column */
+    justify-self: end; /* Align labels to the end of the first column */
+  }
+  
+  #roi-analysis input {
+    padding: 10px;
+    border-radius: 5px; /* Rounded edges to match the buttons */
+    border: none; /* Removing default border */
+    background-color: #1D68A2; /* Background color to match buttons */
+    color: white; /* Text color for contrast */
+    margin-bottom: 10px; /* Spacing between inputs */
+    grid-column: 2 / 3; /* Position all inputs in the second column */
+    justify-self: start; /* Align inputs to the start of the second column */
+  }
+  
+  #roi-analysis input:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(41, 128, 185, 0.5); /* Focus effect to match the app's color palette */
+  }
+  
+  /* Styling for the savings display to match the app's theme */
+  #roi-analysis p {
+    background-color: #2C89C9; /* Subtitle background for consistency */
+    padding: 10px;
+    border-radius: 5px; /* Consistent with other elements */
+    margin-top: 20px;
+    font-size: 1.25em;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    /* Adjustments for ROI Analysis Section */
+    #roi-analysis {
+      padding: 40px 10px;
+      margin: 20px 10px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    /* Adjustments for ROI Analysis Section */
+    #roi-analysis {
+      padding: 20px 5px;
+      margin: 10px;
+    }
+  
+    /* Adjust font sizes for smaller screens */
+    #roi-analysis h2.subtitle,
+    #roi-analysis .content,
+    #roi-analysis p {
+      font-size: 14px;
+    }
+  }

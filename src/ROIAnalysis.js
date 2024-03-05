@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import './ROIAnalysis.css';
 
 function ROIAnalysis() {
   // States for inputs
@@ -27,38 +28,45 @@ function ROIAnalysis() {
   }, [mechanics, averageTasks, timeSavedPerTask]);
 
   return (
-    <div>
-      <h2>ROI Analysis</h2>
-      <label>
-        Number of Mechanics:
+    <div id="roi-analysis">
+        <div className="savings-calculator-title">
+          <h3>Savings Calculator</h3>
+        </div>
+      <div className="roi-form">
+        <label htmlFor="mechanics">
+          Number of Mechanics:
+        </label>
         <input
+          id="mechanics"
           type="number"
           value={mechanics}
           onChange={(e) => setMechanics(Number(e.target.value))}
         />
-      </label>
-      <br />
-      <label>
-        Average Weekly Tasks:
+  
+        <label htmlFor="averageTasks">
+          Average Weekly Tasks:
+        </label>
         <input
+          id="averageTasks"
           type="number"
           value={averageTasks}
           onChange={(e) => setAverageTasks(Number(e.target.value))}
         />
-      </label>
-      <br />
-      <label>
-        Time Saved per Task (minutes):
+  
+        <label htmlFor="timeSavedPerTask">
+          Time Saved per Task (minutes):
+        </label>
         <input
+          id="timeSavedPerTask"
           type="number"
           value={timeSavedPerTask}
           onChange={(e) => setTimeSavedPerTask(Number(e.target.value))}
         />
-      </label>
-      <br />
+      </div>
       <p>Yearly Savings: ${yearlySavings.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</p>
     </div>
   );
+  
 }
 
 export default ROIAnalysis;
