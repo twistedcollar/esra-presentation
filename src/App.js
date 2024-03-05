@@ -43,7 +43,7 @@ function App() {
           <div className="hero-content">
             <h1 className="title">Introducing Project ESRA</h1>
             <p className="subheadline">
-              Step into the future of aviation maintenance with Project ESRA, an innovative digital QA call system designed specifically for the aerospace industry.
+              Step into the future of aviation maintenance with Project ESRA(Enhanced Service for Reliable Assistance), an innovative digital QA call system designed specifically for the aerospace industry.
             </p>
           </div>
           <div className="hero-image">
