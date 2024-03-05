@@ -1,38 +1,269 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+/* App.css */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #192753;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.container {
+  text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.section {
+  padding: 60px 20px;
+  margin: 20px auto;
+  max-width: 800px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.section:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.title {
+  color: #29B25C;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.subtitle {
+  color: #2C89C9;
+  margin-bottom: 20px;
+}
+
+.content {
+  color: #fff;
+  text-align: justify;
+}
+
+.button {
+  display: inline-block;
+  background-color: #1D68A2;
+  color: #fff;
+  padding: 10px 20px;
+  margin: 20px 0;
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+  text-decoration: none;
+}
+
+.button:hover {
+  transform: translateY(-5px);
+}
+
+@media (max-width: 768px) {
+  .section {
+    margin: 20px 10px;
+    padding: 40px 10px;
   }
+}
+
+@media (max-width: 480px) {
+  .section {
+    margin: 10px;
+    padding: 20px 5px;
+  }
+
+  .title, .subtitle {
+    font-size: 18px;
+  }
+
+  .content, .button {
+    font-size: 14px;
+  }
+}
+
+
+/* Existing styles... */
+
+/* ROI Analysis Section Styling to match the app's theme */
+#roi-analysis {
+  background: rgba(255, 255, 255, 0.1); /* Match the section background */
+  padding: 20px;
+  border-radius: 10px; /* Consistent with other sections */
+  color: white; /* Text color for light theme */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Match the shadow of other sections */
+  max-width: 800px; /* Consistent with other sections */
+  margin: 20px auto; /* Consistent with other sections */
+  backdrop-filter: blur(10px); /* Consistent with other sections */
+}
+
+#roi-analysis h2.subtitle { /* Aligning with other subtitles */
+  color: #2C89C9; /* Use the app's subtitle color */
+  margin-bottom: 20px; /* Spacing to match the app's style */
+  text-transform: none; /* If you want to keep the case as is */
+}
+
+#roi-analysis .content { /* Aligning with other content */
+  text-align: justify;
+  margin-bottom: 20px;
+}
+
+/* Style for input fields to match the app's button styling */
+#roi-analysis input {
+  padding: 10px;
+  border-radius: 5px; /* Rounded edges to match the buttons */
+  border: none; /* Removing default border */
+  background-color: #1D68A2; /* Background color to match buttons */
+  color: white; /* Text color for contrast */
+  margin-bottom: 10px; /* Spacing between inputs */
+}
+
+#roi-analysis input:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(41, 128, 185, 0.5); /* Focus effect to match the app's color palette */
+}
+
+/* Styling for the savings display to match the app's theme */
+#roi-analysis p {
+  background-color: #2C89C9; /* Subtitle background for consistency */
+  padding: 10px;
+  border-radius: 5px; /* Consistent with other elements */
+  margin-top: 20px;
+  font-size: 1.25em;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  /* Adjustments for ROI Analysis Section */
+  #roi-analysis {
+    padding: 40px 10px;
+    margin: 20px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Adjustments for ROI Analysis Section */
+  #roi-analysis {
+    padding: 20px 5px;
+    margin: 10px;
+  }
+
+  /* Adjust font sizes for smaller screens */
+  #roi-analysis h2.subtitle,
+  #roi-analysis .content,
+  #roi-analysis p {
+    font-size: 14px;
+  }
+}
+
+/* Add this to your CSS file */
+@keyframes backgroundAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.hero-section {
+  perspective: 500px;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: backgroundAnimation 15s ease infinite;
+}
+
+/* Add these styles in App.css */
+
+/* Modal styles */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  max-width: 500px;
+  width: 100%;
+}
+
+/* Risk Item styles */
+.risk-item {
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.risk-item.low {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.risk-item.medium {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.risk-item.high {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+/* Timeline progress bar styles */
+
+
+.timeline-container {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  background-color: #e0e0e0;
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+.timeline-progress {
+  height: 100%;
+  width: 0; /* Initial width set to 0 */
+  background-image: linear-gradient(to right, #4facfe, #00f2fe);
+  border-radius: 25px;
+  animation: fillToFirstMilestone 2s forwards; /* Animation name and duration */
+}
+
+@keyframes fillToFirstMilestone {
   to {
-    transform: rotate(360deg);
+    width: 25%; /* Adjust this percentage to match the position of your first milestone */
   }
+}
+
+/* App.css */
+
+.milestone {
+  position: absolute;
+  bottom: 100%; /* Adjust if necessary */
+  transform: translateX(-50%);
+}
+
+.milestone-label {
+  position: absolute;
+  bottom: 20px; /* Adjust distance from the timeline bar */
+  background: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.milestone-marker {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  height: 20px; /* Height of the line connecting the label to the bar */
+  border-left: 2px solid #ccc;
+  transform: translateX(-50%);
 }
