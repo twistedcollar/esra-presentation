@@ -6,13 +6,16 @@ const timelineData = [
   { id: 2, milestone: 'Development Phase', description: 'Building the ESRA system', date: 'April - June 2024' },
   { id: 3, milestone: 'Testing and QA', description: 'Quality assurance and testing', date: 'July - August 2024' },
   { id: 4, milestone: 'Hanger Deployment', description: 'Launch of Project ESRA', date: 'September 2024' },
-  { id: 5, milestone: 'Multi Hanger', description: 'Ongoing support and improvements', date: 'Ongoing' }
- 
+  { id: 5, milestone: 'Multi-Hanger', description: 'Ongoing support and improvements', date: 'Ongoing' }
 ];
 
 const Timeline = () => {
-  const [currentMilestoneId] = useState(3);
-  const [labelFontSize, setLabelFontSize] = useState(14); 
+  const [currentMilestoneId, setCurrentMilestoneId] = useState(3);
+  const [labelFontSize, setLabelFontSize] = useState(14);
+
+  const handleMilestoneClick = (id) => {
+    setCurrentMilestoneId(id);
+  };
 
   const calculateProgressWidth = (currentId, total) => {
     const milestoneIndex = timelineData.findIndex(milestone => milestone.id === currentId);
@@ -22,10 +25,9 @@ const Timeline = () => {
   const setLabelStyle = (index, length) => {
     let style = {
       transform: 'translateX(-50%)',
-      maxWidth: '160px' // Ensure labels don't overflow
+      maxWidth: '160px'
     };
 
-    // Adjust label alignment for first and last milestones
     if (index === 0) {
       style.left = '0';
       style.transform = 'translateX(0%)';
@@ -63,7 +65,10 @@ const Timeline = () => {
     
     // Clean up listener when component is unmounted or rerendered
     return () => window.removeEventListener('resize', updateLabelFontSize);
-  }, [timelineData.length]);
+  }, []); // Removed timelineData.length from the dependency array
+
+  // Find the current milestone's details
+  const currentMilestone = timelineData.find(milestone => milestone.id === currentMilestoneId);
 
   return (
     <div className="section" id="timeline">
@@ -74,6 +79,7 @@ const Timeline = () => {
               key={item.id}
               className={`milestone ${item.id === currentMilestoneId ? 'current' : ''}`}
               style={setLabelStyle(index, timelineData.length)}
+              onClick={() => handleMilestoneClick(item.id)} // Add click handler here
             >
               <div className="milestone-label" style={{ fontSize: `${labelFontSize}px` }}>
                 {item.milestone}
@@ -87,6 +93,16 @@ const Timeline = () => {
             '--filled-width': calculateProgressWidth(currentMilestoneId, timelineData.length)
           }}
         ></div>
+      </div>
+      {/* Milestone Details Section */}
+      <div className="milestone-details">
+        {currentMilestone && (
+          <>
+            <h3>{currentMilestone.milestone}</h3>
+            <p>{currentMilestone.description}</p>
+            <p><strong>Date:</strong> {currentMilestone.date}</p>
+          </>
+        )}
       </div>
     </div>
   );

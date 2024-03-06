@@ -10,7 +10,7 @@
   .feature-card {
     width: 150px;
     height: 200px;
-    margin: 5px;
+    margin: 10Spx;
     perspective: 1500px;
     box-sizing: border-box;
     transform: translateZ(0) scale(1.05); /* Slightly scale the card for a 3D effect */
@@ -70,7 +70,7 @@
 
   .feature-card:active {
     transform: translateZ(0) scale(1); /* Slightly reduce the scale for a press-down effect */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Reduce shadow for a "pressed" effect */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Reduce shadow for a "pressed" effect */
   }
 
   
