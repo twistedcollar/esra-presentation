@@ -6,13 +6,16 @@
     padding: 20px;
     align-items: flex-start; /* align items to the start to prevent stretching */
   }
-  
+
   .feature-card {
     width: 150px;
     height: 200px;
     margin: 5px;
     perspective: 1500px;
-    box-sizing: border-box; /* Include padding and border in the element's width and height */
+    box-sizing: border-box;
+    transform: translateZ(0) scale(1.05); /* Slightly scale the card for a 3D effect */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* Apply shadow for depth */
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out; /* Smooth transition for an enhanced effect */
   }
   
   .feature-card-inner {
@@ -52,6 +55,7 @@
   
   .card-front {
     background-color: #1D68A2;
+  
   }
   
   .card-back {
@@ -63,4 +67,10 @@
   .feature-title, .feature-description {
     user-select: none;
   }
+
+  .feature-card:active {
+    transform: translateZ(0) scale(1); /* Slightly reduce the scale for a press-down effect */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Reduce shadow for a "pressed" effect */
+  }
+
   

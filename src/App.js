@@ -63,6 +63,9 @@ function App() {
       <FadeInSection>
         <div className="section" id="features">
           <h2 className="subtitle">App Features</h2>
+          <p className="content">
+            Check out these app features by clicking on them.
+          </p>
           <AppFeatures />
         </div>
       </FadeInSection>

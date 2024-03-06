@@ -1,26 +1,38 @@
-/* risks.css */
 .risks-container {
     display: flex;
     justify-content: space-between;
-    padding: 20px;
+    padding: 10px;
   }
   
   .risk-level {
     flex: 1;
-    margin: 0 10px;
+    margin: 0 5px;
     padding: 20px;
     border-radius: 10px;
-    color: #192753; /* Adjust based on your preference for text color contrast */
+    color: #192753; /* Adjust for better contrast if needed */
+    font-family: 'Arial', sans-serif; /* Example of a more readable font */
+    font-size: .9em; /* Adjust the size as needed */
+    line-height: 1.5; /* Increase line height for better readability */
+    text-align: left; /* Left-aligned text is generally easier to read */
   }
   
   .risk-level ul {
     list-style: none;
     padding: 0;
+    margin: 0; /* Resets default margin */
+  }
+  
+  .risk-level li {
+    margin-bottom: 0.5em; /* Adds space between list items */
+    word-wrap: break-word; /* Ensures text wraps within the container */
   }
   
   .risk-level li::before {
-    content: '• ';
+    content: '•';
     color: #192753; /* Or any color that matches your design */
+    font-size: 1em; /* Ensures consistent sizing with list text */
+    vertical-align: middle; /* Aligns bullet with the middle of text */
+    margin-right: 0.5em; /* Adds space after the bullet */
   }
   
 
@@ -31,8 +43,7 @@
   
   .medium-risk {
     background-color: #ffff99; /* Light yellow */
-    box-shadow: 0 0 8px 0px #ffff99; /* Soft yellow glow */
-    animation: pulsingYellowGlow 2s infinite ease-in-out;
+    box-shadow: 0 0 25px 0px #ffff99; /* Soft yellow glow */
   }
   
   .high-risk {
@@ -50,15 +61,6 @@
     }
     100% {
       box-shadow: 0 0 8px 2px #ff9999;
-    }
-  }
-  
-  @keyframes pulsingYellowGlow {
-    0%, 100% {
-      box-shadow: 0 0 8px 2px #ffff99; /* Starting glow */
-    }
-    50% {
-      box-shadow: 0 0 10px 2.5px #ffff66; /* Slightly increased glow */
     }
   }
   
