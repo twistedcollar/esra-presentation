@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/esra-presentation/static/css/main.a3dbbc9e.css",
-    "main.js": "/esra-presentation/static/js/main.b2d54287.js",
+    "main.css": "/esra-presentation/static/css/main.20954d6e.css",
+    "main.js": "/esra-presentation/static/js/main.823f2796.js",
     "static/js/453.29e84d12.chunk.js": "/esra-presentation/static/js/453.29e84d12.chunk.js",
     "index.html": "/esra-presentation/index.html",
-    "main.a3dbbc9e.css.map": "/esra-presentation/static/css/main.a3dbbc9e.css.map",
-    "main.b2d54287.js.map": "/esra-presentation/static/js/main.b2d54287.js.map",
+    "main.20954d6e.css.map": "/esra-presentation/static/css/main.20954d6e.css.map",
+    "main.823f2796.js.map": "/esra-presentation/static/js/main.823f2796.js.map",
     "453.29e84d12.chunk.js.map": "/esra-presentation/static/js/453.29e84d12.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a3dbbc9e.css",
-    "static/js/main.b2d54287.js"
+    "static/css/main.20954d6e.css",
+    "static/js/main.823f2796.js"
   ]
 }
