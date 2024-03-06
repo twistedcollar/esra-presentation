@@ -80,48 +80,4 @@ body {
 }
 
 
-/* Modal styles */
-.modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.modal-content {
-  background: white;
-  padding: 20px;
-  border-radius: 5px;
-  max-width: 500px;
-  width: 100%;
-}
-
-/* Risk Item styles */
-.risk-item {
-  padding: 10px;
-  margin: 10px 0;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.risk-item.low {
-  background-color: #d4edda;
-  color: #155724;
-}
-
-.risk-item.medium {
-  background-color: #fff3cd;
-  color: #856404;
-}
-
-.risk-item.high {
-  background-color: #f8d7da;
-  color: #721c24;
-}
 

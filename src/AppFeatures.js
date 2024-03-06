@@ -24,12 +24,12 @@ const FeatureCard = ({ feature }) => {
 
 const AppFeatures = () => {
   const features = [
-    { id: 1, title: 'User-friendly interface', description: 'Description of Feature 1' },
-    { id: 2, title: 'Mobile accessibility', description: 'Description of Feature 1' },
-    { id: 3, title: 'QA & Mechanic performance analytics', description: 'Description of Feature 1' },
-    { id: 4, title: 'Real-time task status', description: 'Description of Feature 1' },
-    { id: 5, title: 'Real-time alerts and notifications', description: 'Description of Feature 1' },
-    { id: 6, title: 'Hisorical data downloads', description: 'Description of Feature 1' },
+    { "id": 1, "title": "User-friendly interface", "description": "Intuitive navigation for all user levels." },
+    { "id": 2, "title": "Mobile accessibility", "description": "Full functionality on mobile devices." },
+    { "id": 3, "title": "QA & Mechanic performance analytics", "description": "Quality and performance personnel analysis." },
+    { "id": 4, "title": "Real-time task status", "description": "Updates on tasks as they happen." },
+    { "id": 5, "title": "Real-time alerts and notifications", "description": "Instant alerts for important updates." },
+    { "id": 6, "title": "Historical data downloads", "description": "Download past data for analysis and reporting." }
     // More features can be added here
   ];
 
