@@ -7,6 +7,7 @@ import ROIAnalysis from './ROIAnalysis';
 import { BudgetData } from './ChartData';
 import Timeline from './Timeline';
 import AppFeatures from './AppFeatures';
+import RisksSection from './Risks';
 
 
 const FadeInSection = (props) => {
@@ -97,6 +98,7 @@ function App() {
           <p className="content">
             Project ESRA's risk assessment identifies potential challenges and mitigation strategies.
           </p>
+          <RisksSection />
         </div>
       </FadeInSection>
       <FadeInSection>

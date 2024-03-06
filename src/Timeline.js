@@ -5,13 +5,13 @@ const timelineData = [
   { id: 1, milestone: 'Project Kickoff', description: 'Initiation of Project ESRA', date: 'March 2024' },
   { id: 2, milestone: 'Development Phase', description: 'Building the ESRA system', date: 'April - June 2024' },
   { id: 3, milestone: 'Testing and QA', description: 'Quality assurance and testing', date: 'July - August 2024' },
-  { id: 4, milestone: 'Deployment dddd', description: 'Launch of Project ESRA', date: 'September 2024' },
-  { id: 5, milestone: 'Monitoringsssssss', description: 'Ongoing support and improvements', date: 'Ongoing' }
+  { id: 4, milestone: 'Hanger Deployment', description: 'Launch of Project ESRA', date: 'September 2024' },
+  { id: 5, milestone: 'Multi Hanger', description: 'Ongoing support and improvements', date: 'Ongoing' }
  
 ];
 
 const Timeline = () => {
-  const [currentMilestoneId] = useState(4);
+  const [currentMilestoneId] = useState(3);
   const [labelFontSize, setLabelFontSize] = useState(14); 
 
   const calculateProgressWidth = (currentId, total) => {
@@ -83,7 +83,9 @@ const Timeline = () => {
         </div>
         <div
           className="timeline-progress"
-          style={{ width: calculateProgressWidth(currentMilestoneId, timelineData.length) }}
+          style={{
+            '--filled-width': calculateProgressWidth(currentMilestoneId, timelineData.length)
+          }}
         ></div>
       </div>
     </div>

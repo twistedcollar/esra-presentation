@@ -12,6 +12,7 @@
   background-color: #e0e0e0;
   border-radius: 10px;
   overflow: hidden;
+  --label-font-size: 14px;
 }
 
 .milestones {
@@ -43,6 +44,7 @@
   text-overflow: ellipsis; /* Add ellipsis for overflowed text */
   max-width: 160px; /* Adjust max-width as needed */
   display: inline-block; /* Necessary for text-overflow to work */
+  font-size: var(--label-font-size);
 }
 
 .timeline-progress {
@@ -52,10 +54,49 @@
   height: 20px;
   background-image: linear-gradient(to right, #4facfe, #00f2fe);
   border-radius: 10px;
+  animation: fillProgress 2s ease-out forwards, /* Fill effect */
+  highlightProgress 3s ease-in-out infinite alternate; /* Highlight effect */
+--filled-width: 0%; /* Initial value, will be set dynamically in React */
+background-size: 200% 100%; /* For the highlight effect to work */
 }
+
 
 .milestone.current .milestone-label {
   background: #4facfe;
   color: white;
   border-color: #00f2fe;
+}
+
+
+.timeline-progress::after {
+  content: '';
+  display: block;
+  height: 100%;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.2); /* Light white overlay */
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0; /* Start with a transparent overlay */
+  border-radius: 10px; /* Match the border-radius of the progress bar */
+  animation: progress-highlight 2s infinite alternate linear;
+}
+
+@keyframes fillProgress {
+  from {
+    width: 0;
+  }
+  to {
+    width: var(--filled-width);
+  }
+}
+
+/* Highlight/glow animation for the progress bar */
+@keyframes highlightProgress {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
 }

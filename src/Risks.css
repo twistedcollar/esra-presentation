@@ -1,0 +1,37 @@
+/* risks.css */
+.risks-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  
+  .risk-level {
+    flex: 1;
+    margin: 0 10px;
+    padding: 20px;
+    border-radius: 10px;
+    color: #192753; /* Adjust based on your preference for text color contrast */
+  }
+  
+  .low-risk {
+    background-color: #29B25C; /* Green */
+  }
+  
+  .medium-risk {
+    background-color: #FFD700; /* Yellow */
+  }
+  
+  .high-risk {
+    background-color: #DC143C; /* Red */
+  }
+  
+  .risk-level ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .risk-level li::before {
+    content: '• ';
+    color: #192753; /* Or any color that matches your design */
+  }
+  
