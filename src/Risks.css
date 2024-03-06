@@ -13,18 +13,6 @@
     color: #192753; /* Adjust based on your preference for text color contrast */
   }
   
-  .low-risk {
-    background-color: #29B25C; /* Green */
-  }
-  
-  .medium-risk {
-    background-color: #FFD700; /* Yellow */
-  }
-  
-  .high-risk {
-    background-color: #DC143C; /* Red */
-  }
-  
   .risk-level ul {
     list-style: none;
     padding: 0;
@@ -33,5 +21,44 @@
   .risk-level li::before {
     content: '• ';
     color: #192753; /* Or any color that matches your design */
+  }
+  
+
+  .low-risk {
+    background-color: #90ee90; /* Lighter green */
+    box-shadow: 0 0 10px 0px #90ee90; /* Soft green glow */
+  }
+  
+  .medium-risk {
+    background-color: #ffff99; /* Light yellow */
+    box-shadow: 0 0 8px 0px #ffff99; /* Soft yellow glow */
+    animation: pulsingYellowGlow 2s infinite ease-in-out;
+  }
+  
+  .high-risk {
+    background-color: #ff9999; /* Light red */
+    box-shadow: 0 0 100px 2px #ff9999; /* Initial soft red glow */
+    animation: pulsingRedGlow 2s infinite ease-in-out;
+  }
+
+  @keyframes pulsingRedGlow {
+    0% {
+      box-shadow: 0 0 8px 2px #ff9999;
+    }
+    50% {
+      box-shadow: 0 0 12px 3px #f80101; /* Increase the glow */
+    }
+    100% {
+      box-shadow: 0 0 8px 2px #ff9999;
+    }
+  }
+  
+  @keyframes pulsingYellowGlow {
+    0%, 100% {
+      box-shadow: 0 0 8px 2px #ffff99; /* Starting glow */
+    }
+    50% {
+      box-shadow: 0 0 10px 2.5px #ffff66; /* Slightly increased glow */
+    }
   }
   

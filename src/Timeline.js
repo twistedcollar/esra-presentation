@@ -49,9 +49,9 @@ const Timeline = () => {
       if (containerWidth < neededWidth) {
         // Decrease font size if neededWidth is more than containerWidth
         const scaleFactor = containerWidth / neededWidth;
-        setLabelFontSize(Math.max(10, 14 * scaleFactor)); // Don't go below 10px
+        setLabelFontSize(Math.max(10, 16 * scaleFactor)); // Don't go below 10px
       } else {
-        setLabelFontSize(14); // Default font size
+        setLabelFontSize(16); // Default font size
       }
     };
     

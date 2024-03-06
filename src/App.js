@@ -61,7 +61,6 @@ function App() {
         </div>
       </FadeInSection>
       <FadeInSection>
-        
         <div className="section" id="features">
           <h2 className="subtitle">App Features</h2>
           <AppFeatures />
@@ -84,21 +83,21 @@ function App() {
         </div>
       </FadeInSection>
       <FadeInSection>
-        <div className="section" id="timeline">
-          <h2 className="subtitle">Timeline</h2>
-          <p className="content">
-            Project ESRA's timeline outlines key milestones, while risk assessment identifies potential challenges and mitigation strategies.
-          </p>
-          <Timeline />
-        </div>
-      </FadeInSection>
-      <FadeInSection>
         <div className="section" id="risks">
           <h2 className="subtitle">Risks</h2>
           <p className="content">
             Project ESRA's risk assessment identifies potential challenges and mitigation strategies.
           </p>
           <RisksSection />
+        </div>
+      </FadeInSection>
+      <FadeInSection>
+        <div className="section" id="timeline">
+          <h2 className="subtitle">Timeline</h2>
+          <p className="content">
+            Project ESRA's timeline outlines key milestones, while risk assessment identifies potential challenges and mitigation strategies.
+          </p>
+          <Timeline />
         </div>
       </FadeInSection>
       <FadeInSection>
