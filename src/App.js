@@ -111,8 +111,9 @@ function App() {
       <FadeInSection>
         <div className="section" id="roi-analysis">
           <h2 className="subtitle">ROI Analysis</h2>
-          <BudgetCalculator />
+          
           <ROIAnalysis /> 
+          <BudgetCalculator />
         </div>
       </FadeInSection>
       <FadeInSection>
