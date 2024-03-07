@@ -1,0 +1,107 @@
+/* Budget Calculator Styling to match the ROI Analysis theme */
+.budget-calculator {
+    background: rgba(255, 255, 255, 0.1); /* Match the section background */
+    padding: 20px;
+    border-radius: 10px; /* Consistent with other sections */
+    color: white; /* Text color for light theme */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Match the shadow of other sections */
+    max-width: 800px; /* Consistent with other sections */
+    margin: 20px auto; /* Consistent with other sections */
+    backdrop-filter: blur(10px); /* Consistent with other sections */
+}
+
+.budget-calculator .input-group {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-gap: 10px;
+    align-items: center; /* This will vertically center the labels with the inputs */
+    margin-bottom: 20px; /* Spacing between form items */
+}
+
+.budget-calculator label {
+    grid-column: 1 / 2; /* Position all labels in the first column */
+    justify-self: end; /* Align labels to the end of the first column */
+    color: white; /* Text color for contrast */
+}
+
+.budget-calculator input {
+    padding: 10px;
+    border-radius: 5px; /* Rounded edges to match the buttons */
+    border: none; /* Removing default border */
+    background-color: #1D68A2; /* Background color to match buttons */
+    color: white; /* Text color for contrast */
+    margin-bottom: 10px; /* Spacing between inputs */
+    grid-column: 2 / 3; /* Position all inputs in the second column */
+    justify-self: start; /* Align inputs to the start of the second column */
+}
+
+.budget-calculator input:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(41, 128, 185, 0.5); /* Focus effect to match the app's color palette */
+}
+
+.budget-calculator button {
+    grid-column: 1 / 3; /* Stretch the button across both columns */
+    justify-self: center; /* Center the button */
+    padding: 10px;
+    border-radius: 5px; /* Rounded edges to match inputs */
+    background-color: #2C89C9; /* Background color to match app's theme */
+    color: white; /* Text color for contrast */
+    border: none; /* No border for buttons */
+    cursor: pointer; /* Cursor effect */
+    margin-top: 20px; /* Space above the button */
+}
+
+.budget-calculator button:hover {
+    background-color: #1D68A2; /* Hover effect color */
+}
+
+.budget-calculator .result {
+    grid-column: 1 / 3; /* Stretch the result display across both columns */
+    justify-self: center; /* Center the result display */
+    background-color: #2C89C9; /* Subtitle background for consistency */
+    padding: 5px;
+    border-radius: 5px; /* Consistent with other elements */
+    font-size: 1em;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin-top: 20px;
+}
+.budget-calculator select {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #1D68A2;
+    color: white;
+    margin-bottom: 5px;
+    -webkit-appearance: none; /* Removes default styling for dropdown */
+    -moz-appearance: none; /* Removes default styling for dropdown */
+    appearance: none; /* Removes default styling for dropdown */
+}
+
+.budget-calculator select:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(41, 128, 185, 0.5);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .budget-calculator {
+        padding: 40px 10px;
+        margin: 20px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .budget-calculator {
+        padding: 20px 5px;
+        margin: 10px;
+    }
+
+    .budget-calculator label,
+    .budget-calculator input,
+    .budget-calculator button,
+    .budget-calculator .result {
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+}

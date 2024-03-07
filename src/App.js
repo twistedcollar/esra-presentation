@@ -4,10 +4,36 @@ import './App.css';
 import { Pie } from 'react-chartjs-2';
 import 'chart.js/auto';
 import ROIAnalysis from './ROIAnalysis';
-import { BudgetData } from './ChartData';
+import { BudgetData, getTotalFunding } from './ChartData';
+import BudgetCalculator from './BudgetCalculator';
+
+
 import Timeline from './Timeline';
 import AppFeatures from './AppFeatures';
 import RisksSection from './Risks';
+
+const chartOptions = {
+  plugins: {
+    legend: {
+      labels: {
+        color: 'white', // White color for legend labels
+        font: {
+          size: 13 // Set the font size here
+        }
+      }
+    },
+    tooltip: {
+      bodyFont: {
+        size: 14 // Set the font size for tooltip items here
+      },
+      titleFont: {
+        size: 14 // Set the font size for tooltip titles here
+      }
+    }
+  }
+};
+
+const totalFunding = getTotalFunding(BudgetData.datasets[0].data);
 
 
 const FadeInSection = (props) => {
@@ -42,7 +68,7 @@ function App() {
       <FadeInSection>
         <div className="section hero" id="project-esra">
           <div className="hero-content">
-            <h1 className="title">Introducing Project ESRA</h1>
+            <h1 className="title">Project ESRA</h1>
             <p className="subheadline">
               Step into the future of aviation maintenance with Project ESRA(Enhanced Service for Reliable Assistance), an innovative digital QA call system designed specifically for the aerospace industry.
             </p>
@@ -56,7 +82,7 @@ function App() {
         <div className="section" id="introduction">
           <h2 className="subtitle">Introduction</h2>
           <p className="content">
-            Project ESRA streamlines communication between mechanics and remote QA specialists, reducing downtime and walking time. Its user-friendly interface ensures straightforward task handling, enabling teams to focus on keeping aircraft flying safely.
+            Project ESRA streamlines communication between aircraft mechanics and QA representatives. Specifically designed to reduce downtime, walking time, and increase productivity. Its user-friendly interface ensures straightforward task handling, enabling teams to focus on keeping aircraft flying safely.
           </p>
         </div>
       </FadeInSection>
@@ -64,7 +90,7 @@ function App() {
         <div className="section" id="features">
           <h2 className="subtitle">App Features</h2>
           <p className="content">
-            Check out these app features by clicking on them.
+            Click on the feature card to display the description.
           </p>
           <AppFeatures />
         </div>
@@ -74,14 +100,18 @@ function App() {
           <h2 className="subtitle">Budget/Funding</h2>
           <p className="content">Overview of project budget and funding sources:</p>
           <div>
-            <Pie data={BudgetData} />
+            <Pie data={BudgetData} options={chartOptions} />
+            <div className="total-funding">
+              <h3>Test Product Funding: ${totalFunding.toLocaleString()}</h3>
+            </div>
+          
           </div>
         </div>
       </FadeInSection>
       <FadeInSection>
         <div className="section" id="roi-analysis">
           <h2 className="subtitle">ROI Analysis</h2>
-          <p className="content">Interactive analysis of expected Return on Investment based on operational efficiencies:</p>
+          <BudgetCalculator />
           <ROIAnalysis /> 
         </div>
       </FadeInSection>
@@ -89,7 +119,7 @@ function App() {
         <div className="section" id="risks">
           <h2 className="subtitle">Risks</h2>
           <p className="content">
-            Project ESRA's risk assessment identifies potential challenges and mitigation strategies.
+            Project ESRA's risk assessment identifies potential challenges.
           </p>
           <RisksSection />
         </div>
@@ -98,7 +128,7 @@ function App() {
         <div className="section" id="timeline">
           <h2 className="subtitle">Timeline</h2>
           <p className="content">
-            Project ESRA's timeline outlines key milestones, while risk assessment identifies potential challenges and mitigation strategies.
+            Project ESRA's timeline outlines key milestones.
           </p>
           <Timeline />
         </div>

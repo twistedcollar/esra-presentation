@@ -2,12 +2,13 @@ import React, { useState, useEffect } from 'react';
 import './Timeline.css';
 
 const timelineData = [
-  { id: 1, milestone: 'Project Kickoff', description: 'Initiation of Project ESRA', date: 'March 2024' },
-  { id: 2, milestone: 'Development Phase', description: 'Building the ESRA system', date: 'April - June 2024' },
-  { id: 3, milestone: 'Testing and QA', description: 'Quality assurance and testing', date: 'July - August 2024' },
-  { id: 4, milestone: 'Hanger Deployment', description: 'Launch of Project ESRA', date: 'September 2024' },
-  { id: 5, milestone: 'Multi-Hanger', description: 'Ongoing support and improvements', date: 'Ongoing' }
+  { id: 1, milestone: 'Funding', description: 'Secure funding for Project ESRA and procure necessary hardware. This includes tablets, hotspots, and stands needed for the setup.', date: 'April - May 2024' },
+  { id: 2, milestone: 'System Setup', description: 'Installation and setup of WiFi services, tablets, hotspots, and initial software setup followed by preliminary in-house testing to ensure basic functionality.', date: 'June - July 2024' },
+  { id: 3, milestone: 'Testing & Training', description: 'Conduct pilot testing in a controlled live environment to monitor app performance and fix preliminary bugs. Begin training key staff on system usage.', date: 'August 2024' },
+  { id: 4, milestone: ' Deployment ', description: 'Commence full-scale deployment of Project ESRA, including extensive user training, and execute a complete operational test to validate system performance under typical usage scenarios.', date: 'September - October 2024' },
+  { id: 5, milestone: 'Improvement', description: 'Post-deployment review of the system to identify areas for improvement. Implement iterative updates and refinements to enhance system performance and user experience.', date: 'November 2024 - January 2025' }
 ];
+
 
 const Timeline = () => {
   const [currentMilestoneId, setCurrentMilestoneId] = useState(3);

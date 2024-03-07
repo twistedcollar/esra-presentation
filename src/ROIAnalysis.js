@@ -31,6 +31,7 @@ function ROIAnalysis() {
     <div id="roi-analysis">
         <div className="savings-calculator-title">
           <h3>Savings Calculator</h3>
+          <h4>Adjust the fields to see the expected savings for using the app.</h4>
         </div>
       <div className="roi-form">
         <label htmlFor="mechanics">
